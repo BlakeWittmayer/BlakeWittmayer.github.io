@@ -10,16 +10,27 @@
         <link rel="stylesheet" href="lib/leaflet/leaflet.css" />
         <script src="lib/leaflet/leaflet.js"></script>
         <script src="data/roads.geojson"></script>
-        <style type="text/css">
-            #map {height:400px;}
+        <script src="data/buildings.geojson"></script>
+        <style>
+            body {
+                padding: 0;
+                margin: 0;
+            }
+            html, body, #map {
+                height: 100%;
+                width: 100%;
+            }
         </style>
     </head>
     <body>
-        <h1>My Map</h1>
+        <h1>New Haven County, State of Mayflower</h1>
         <div id="map"></div>
         <script>
             var map = L.map('map');
             var roadsLayer = L.geoJson(roads).addTo(map);
+            var buildingsLayer = L.geoJson(buildings).addTo(map);
+            var landcover = L.geoJson(landcover).addTo(map);
+            var waterAreas = L.geoJson(waterAreas).addTo(map);
             map.fitBounds(roadsLayer.getBounds());
         </script>
     </body>
