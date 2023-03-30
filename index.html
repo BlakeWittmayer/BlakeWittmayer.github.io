@@ -11,6 +11,9 @@
         <script src="lib/leaflet/leaflet.js"></script>
         <script src="data/roads.geojson"></script>
         <script src="data/buildings.geojson"></script>
+        <script src="data/water_areas.geojson"></script>
+        <script src="data/landcover.geojson"></script> 
+        <script src="data/water_lines.geojson"></script>
         <style>
             body {
                 padding: 0;
@@ -30,8 +33,9 @@
             var roadsLayer = L.geoJson(roads).addTo(map);
             var buildingsLayer = L.geoJson(buildings).addTo(map);
             var landcover = L.geoJson(landcover).addTo(map);
-            var waterAreas = L.geoJson(waterAreas).addTo(map);
-            map.fitBounds(roadsLayer.getBounds());
+            var water_areas = L.geoJson(water_areas).addTo(map);
+            var water_lines = L.geoJson(water_lines).addTo(map);
+            map.fitBounds(landcover.getBounds());
         </script>
     </body>
 </html>
