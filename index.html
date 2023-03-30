@@ -1,7 +1,26 @@
 <!DOCTYPE html>
 <html>
-<body>
-<h1>Hello World</h1>
-<p>I'm hosted with GitHub Pages.</p>
-</body>
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device.width, initial-scale=1" />
+        <title>
+            Mayflower Map
+        </title>
+        <!-- Leaflet -->
+        <link rel="stylesheet" href="lib/leaflet/leaflet.css" />
+        <script src="lib/leaflet/leaflet.js"></script>
+        <script src="data/roads.geojson"></script>
+        <style type="text/css">
+            #map {height:400px;}
+        </style>
+    </head>
+    <body>
+        <h1>My Map</h1>
+        <div id="map"></div>
+        <script>
+            var map = L.map('map');
+            var roadsLayer = L.geoJson(roads).addTo(map);
+            map.fitBounds(roadsLayer.getBounds());
+        </script>
+    </body>
 </html>
