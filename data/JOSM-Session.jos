@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<josm-session version="0.1">
+    <viewport>
+        <center lat="0.007256818404213228" lon="-0.05815927475367839"/>
+        <scale meter-per-pixel="1.372683"/>
+    </viewport>
+    <projection>
+        <projection-choice>
+            <id>core:mercator</id>
+            <parameters/>
+        </projection-choice>
+        <code>EPSG:3857</code>
+    </projection>
+    <layers active="2">
+        <layer index="1" name="amenity_polygons.geojson" type="osm-data" version="0.1" visible="true">
+            <file>file:/C:/Users/hp/Desktop/BlakeWittmayer.github.io/data/amenity_polygons.geojson</file>
+        </layer>
+        <layer index="2" name="roads.geojson" type="osm-data" version="0.1" visible="true">
+            <file>file:/C:/Users/hp/Desktop/BlakeWittmayer.github.io/data/roads.geojson</file>
+        </layer>
+        <layer index="3" name="buildings.geojson" type="osm-data" version="0.1" visible="true">
+            <file>file:/C:/Users/hp/Desktop/BlakeWittmayer.github.io/data/buildings.geojson</file>
+        </layer>
+        <layer index="4" name="landcover.geojson" type="osm-data" version="0.1" visible="true">
+            <file>file:/C:/Users/hp/Desktop/BlakeWittmayer.github.io/data/landcover.geojson</file>
+        </layer>
+        <layer index="5" name="water_areas.geojson" type="osm-data" version="0.1" visible="true">
+            <file>file:/C:/Users/hp/Desktop/BlakeWittmayer.github.io/data/water_areas.geojson</file>
+        </layer>
+        <layer index="6" name="NHC_REMADE_RENDER1_1.png" type="piclayerImage" version="0.1" visible="true">
+            <piclayerImage>
+                <file>C:\Users\hp\Downloads\NHC_REMADE_RENDER1_1.png</file>
+                <thumbnail>false</thumbnail>
+            </piclayerImage>
+        </layer>
+    </layers>
+</josm-session>
