@@ -86,14 +86,35 @@
                 }
             }
 
+            function onEachFeature(feature, layer) {
+                // DO THIS FOR EACH COUNTRY
+                // events
+                layer.on({
+                    mouseover: function () {
+                        this.setStyle({
+                            'fillColor': '#b45501',
+                        });
+                    },
+                    mouseout: function () {
+                        this.setStyle({
+                            'fillColor': 'lightGray',
+                        });
+                    }
+                });
+                var popupContent = '<table>';
+                for (var p in feature.properties) {
+                    popupContent += '<tr><td>' + p + ':</td><td><b>' + feature.properties[p] + '</b></td></tr>';
+                }
+                popupContent += '</table>';
+                layer.bindPopup(popupContent);
+            }
+
             var map = L.map('map');
             var water_areas = L.geoJson(water_areas,{style:waterStyle}).addTo(map);
             var landcover = L.geoJson(landcover,{style:landmassStyle}).addTo(map);
             var water_lines = L.geoJson(water_lines,{style:waterStyle}).addTo(map);
-            var buildingsLayer = L.geoJson(amenities,{style:amenityStyle}).addTo(map);
             var roadsLayer = L.geoJson(roads,{style:roadStyle}).addTo(map);
-            var buildingsLayer = L.geoJson(buildings,{style:buildingStyle}).addTo(map);
-
+            var buildingsLayer = L.geoJson(buildings,{style:buildingStyle,onEachFeature: onEachFeature}).addTo(map);
             map.fitBounds(landcover.getBounds());
         </script>
     </body>
