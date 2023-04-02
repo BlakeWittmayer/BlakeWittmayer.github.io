@@ -1,4 +1,4 @@
-var buildings = {
+var json_buildings_5 = {
     "type": "FeatureCollection",
     "generator": "JOSM",
     "features": [
