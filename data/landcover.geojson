@@ -1,4 +1,4 @@
-var landcover = {
+{
     "type": "FeatureCollection",
     "generator": "JOSM",
     "features": [

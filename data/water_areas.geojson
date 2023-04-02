@@ -1,4 +1,4 @@
-var water_areas = {
+{
     "type": "FeatureCollection",
     "generator": "JOSM",
     "features": [
