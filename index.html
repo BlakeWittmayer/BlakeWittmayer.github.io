@@ -1,11 +1,10 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <meta charset="UTF-8" />
-        <meta name="viewport" content="width=device.width, initial-scale=1" />
-        <title>
-            Mayflower Map
-        </title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device.width, initial-scale=1">
+        
+        <title>New Haven County, State of Mayflower</title>
 
         <!-- Leaflet -->
         <link rel="stylesheet" href="lib/leaflet/leaflet.css" />
@@ -24,20 +23,21 @@
         <script src="data/amenity_polygons.geojson"></script>
 
         <style>
-            body {  
+            html, body, #map {
+                width: 100%;
+                height: 100%;
                 padding: 0;
                 margin: 0;
             }
-            html, body, #map {
-                height: 100%;
-                width: 100%;
-            }
         </style>
     </head>
+        
     <body>
         <h1>New Haven County, State of Mayflower</h1>
         <div id="map"></div>
         <script>
+            var map = L.map('map');
+
             function landmassStyle(feature){
                 return {
                     fillColor:'green',
@@ -86,9 +86,7 @@
                 }
             }
 
-            function onEachFeature(feature, layer) {
-                // DO THIS FOR EACH COUNTRY
-                // events
+            function buildingInteraction(feature, layer) {
                 layer.on({
                     mouseover: function () {
                         this.setStyle({
@@ -109,12 +107,12 @@
                 layer.bindPopup(popupContent);
             }
 
-            var map = L.map('map');
             var water_areas = L.geoJson(water_areas,{style:waterStyle}).addTo(map);
             var landcover = L.geoJson(landcover,{style:landmassStyle}).addTo(map);
             var water_lines = L.geoJson(water_lines,{style:waterStyle}).addTo(map);
             var roadsLayer = L.geoJson(roads,{style:roadStyle}).addTo(map);
-            var buildingsLayer = L.geoJson(buildings,{style:buildingStyle,onEachFeature: onEachFeature}).addTo(map);
+            var buildingsLayer = L.geoJson(buildings,{style:buildingStyle,onEachFeature: buildingInteraction}).addTo(map);
+
             map.fitBounds(landcover.getBounds());
         </script>
     </body>

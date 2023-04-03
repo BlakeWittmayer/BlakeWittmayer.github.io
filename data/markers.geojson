@@ -1,0 +1,231 @@
+
+{
+    "type": "FeatureCollection",
+    "generator": "JOSM",
+    "features": [
+        {
+            "type": "Feature",
+            "properties": {
+                "amenity": "police"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -0.05999979276,
+                    0.01823769983
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "building": "construction"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -0.04764275000,
+                    0.00431202500
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "amenity": "fast_food"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -0.05866675000,
+                    0.01451087500
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "shop": "supermarket"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -0.05104400000,
+                    0.01572125000
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "leisure": "stadium",
+                "sport": "baseball"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -0.04947862963,
+                    0.00029983459
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "amenity": "fuel"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -0.05280391250,
+                    0.00224773750
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "amenity": "post_office"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -0.04800825000,
+                    0.01486627500
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "public_transport": "station"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -0.06026770000,
+                    0.00037052500
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "amenity": "restaurant"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -0.04536470000,
+                    0.00882312500
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "office": "lawyer"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -0.06023140000,
+                    0.00639365000
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "amenity": "parking"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -0.04806080000,
+                    0.01281600000
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "shop": "car"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -0.04514271667,
+                    0.00973766667
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "amenity": "hospital"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -0.05253600000,
+                    0.01239180000
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "religion": "christian",
+                "amenity": "place_of_worship"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -0.05985590000,
+                    0.01285237500
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "amenity": "police"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -0.05532813333,
+                    0.00080110000
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "amenity": "townhall"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -0.06521876471,
+                    0.00795411176
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "atm": "yes",
+                "amenity": "bank"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -0.05858012000,
+                    0.01676170000
+                ]
+            }
+        }
+    ]
+}
