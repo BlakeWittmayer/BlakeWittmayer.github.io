@@ -1,4 +1,5 @@
-var buildings = {
+var buildings = 
+{
     "type": "FeatureCollection",
     "generator": "JOSM",
     "features": [
@@ -983,7 +984,7 @@ var buildings = {
             "properties": {
                 "name": "Lander Wok",
                 "building": "commercial",
-                "contact:trello": "https://trello.com/c/1rT1SHR0/7-lander-wok",
+                "contact:trello": "https://trello.com/c/1rT1SHR0",
                 "department_of_state:type": "Commercial Property",
                 "department_of_state:status": "Available",
                 "addr:street": "Industrial Pkwy",
@@ -1987,7 +1988,7 @@ var buildings = {
                 "operator": "McDoogle Corporation",
                 "department_of_state:status": "Business Ownership",
                 "department_of_state:type": "Multi-Commercial Property",
-                "contact:trello": "https://trello.com/c/E13UNlL1/6-mcdoogle-tower"
+                "contact:trello": "https://trello.com/c/E13UNlL1"
             },
             "geometry": {
                 "type": "Polygon",
@@ -6248,7 +6249,7 @@ var buildings = {
                 "name": "Plug 'N Chug",
                 "building": "commercial",
                 "amenity": "fuel",
-                "contact:trello": "https://trello.com/c/RFVPsUa3/3-plug-n-chug",
+                "contact:trello": "https://trello.com/c/RFVPsUa3",
                 "department_of_state:type": "Commercial Property",
                 "department_of_state:status": "Available",
                 "addr:street": "Hill St",
@@ -8362,7 +8363,7 @@ var buildings = {
                 "name": "Plug 'N Chug",
                 "building": "commercial",
                 "amenity": "fuel",
-                "contact:trello": "https://trello.com/c/RFVPsUa3/3-plug-n-chug",
+                "contact:trello": "https://trello.com/c/RFVPsUa3",
                 "department_of_state:type": "Commercial Property",
                 "department_of_state:status": "Available",
                 "addr:street": "Hill St",
