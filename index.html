@@ -7,19 +7,27 @@
         <title>New Haven County, State of Mayflower</title>
 
         <!-- Leaflet -->
-        <link rel="stylesheet" href="lib/leaflet/leaflet.css" />
-        <script src="lib/leaflet/leaflet.js"></script>
+        <script src="https://unpkg.com/leaflet@1.9.3/dist/leaflet.js" integrity="sha256-WBkoXOwTeyKclOHuWtc+i2uENFpDZ9YPdf5Hf+D7ewM=" crossorigin=""></script>
 
-        <!-- leaflet-geojson-vt -->
+        <!-- css -->
+        <link rel="stylesheet" href="css/leaflet.css">
+        <link rel="stylesheet" href="css/fontawesome-all.min.css">
+        <link rel="stylesheet" href="css/leaflet-control-geocoder.Geocoder.css">
+
+        <!-- javascript -->
         <script src="https://unpkg.com/geojson-vt@3.2.0/geojson-vt.js"></script>
         <script src="js/leaflet-geojson-vt.js"></script>
+        <script src="js/leaflet-hash.js"></script>
+        <script src="js/Autolinker.min.js"></script>
+        <script src="js/qgis2web_expressions.js"></script>
+        <script src="js/multi-style-layer.js"></script>
+        <script src="js/labelgun.min.js"></script>
+        <script src="js/labels.js"></script>
 
         <!-- geojson data -->
         <script src="data/roads.geojson"></script>
         <script src="data/buildings.geojson"></script>
-        <script src="data/water_areas.geojson"></script>
         <script src="data/landcover.geojson"></script> 
-        <script src="data/water_lines.geojson"></script>
         <script src="data/amenity_polygons.geojson"></script>
 
         <style>
@@ -33,31 +41,22 @@
     </head>
         
     <body>
-        <h1>New Haven County, State of Mayflower</h1>
         <div id="map"></div>
         <script>
-            var map = L.map('map');
+            var map = L.map('map', {
+                zoomControl:true, maxZoom:28, minZoom:1
+            }).fitBounds([[-0.09133009394561503,-0.1432214613288957],[0.07458856286402665,0.24899245801237294]]);
+            var hash = new L.Hash(map);
+            map.attributionControl.setPrefix('<a href="https://github.com/tomchadwin/qgis2web" target="_blank">qgis2web</a> &middot; <a href="https://leafletjs.com" title="A JS library for interactive maps">Leaflet</a> &middot; <a href="https://qgis.org">QGIS</a>');
 
             function landmassStyle(feature){
                 return {
-                    fillColor:'green',
-                    weight:2,
-                    opacity:0.7,
-                    color:'green',
-                    fillOpacity:0.3
+                    fillColor:'#94d180',
+                    opacity:0,
+                    fillOpacity:1
                 }
             }
-
-            function waterStyle(feature){
-                return {
-                    fillColor:'blue',
-                    weight:1,
-                    opacity:0.5,
-                    color:'blue',
-                    fillOpacity:0.2
-                }
-            }
-
+             
             function buildingStyle(feature){
                 return {
                     fillColor:'lightGray',
@@ -70,9 +69,8 @@
 
             function roadStyle(feature){
                 return {
-                    weight:2,
-                    opacity:0.75,
-                    color:'black'
+                    weight:2.5,
+                    color:"rgba(108, 108, 108, 1)"
                 }
             }
 
@@ -107,12 +105,22 @@
                 layer.bindPopup(popupContent);
             }
 
-            var water_areas = L.geoJson(water_areas,{style:waterStyle}).addTo(map);
             var landcover = L.geoJson(landcover,{style:landmassStyle}).addTo(map);
-            var water_lines = L.geoJson(water_lines,{style:waterStyle}).addTo(map);
             var roadsLayer = L.geoJson(roads,{style:roadStyle}).addTo(map);
             var buildingsLayer = L.geoJson(buildings,{style:buildingStyle,onEachFeature: buildingInteraction}).addTo(map);
 
+            var title = new L.Control();
+            title.onAdd = function (map) {
+                this._div = L.DomUtil.create('div', 'info');
+                this.update();
+                return this._div;
+            };
+            title.update = function () {
+                this._div.innerHTML = '<h2>New Haven County, State of Mayflower</h2>';
+            };
+            
+            title.addTo(map);
+            
             map.fitBounds(landcover.getBounds());
         </script>
     </body>
