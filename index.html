@@ -26,9 +26,11 @@
 
         <!-- geojson data -->
         <script src="data/roads.geojson"></script>
-        <script src="data/buildings.geojson"></script>
+        <script src="data/active_buildings.geojson"></script>
         <script src="data/landcover.geojson"></script> 
         <script src="data/amenity_polygons.geojson"></script>
+        <script src="data/streets.geoJson"></script>
+        <script src="data/inactive_buildings.geojson"></script>
 
         <style>
             html, body, #map {
@@ -56,21 +58,39 @@
                     fillOpacity:1
                 }
             }
-             
-            function buildingStyle(feature){
-                return {
+
+            function activeBuildingStyle(feature){
+                return { 
                     fillColor:'lightGray',
                     weight:1,
                     opacity:1,
                     color:'gray',
-                    fillOpacity:0.5
+                    fillOpacity:1
+                }
+            }
+
+            function inactiveBuildingStyle(feature){
+                return { 
+                    fillColor:'darkGray',
+                    weight:1,
+                    opacity:1,
+                    color:'gray',
+                    fillOpacity:1
+                }
+            }
+
+            function streetStyle(feature){
+                return {
+                    weight:2.5,
+                    color:"rgba(108, 108, 108, 1)"
                 }
             }
 
             function roadStyle(feature){
                 return {
                     weight:2.5,
-                    color:"rgba(108, 108, 108, 1)"
+                    color:"brown",
+                    opacity:0.7
                 }
             }
 
@@ -106,8 +126,10 @@
             }
 
             var landcover = L.geoJson(landcover,{style:landmassStyle}).addTo(map);
+            var streetsLayer = L.geoJson(streets,{style:streetStyle}).addTo(map);
             var roadsLayer = L.geoJson(roads,{style:roadStyle}).addTo(map);
-            var buildingsLayer = L.geoJson(buildings,{style:buildingStyle,onEachFeature: buildingInteraction}).addTo(map);
+            var inactiveBuildingLayer = L.geoJson(inactive_buildings,{style:inactiveBuildingStyle}).addTo(map);
+            var activeBuildingsLayer = L.geoJson(active_buildings,{style:activeBuildingStyle,onEachFeature:buildingInteraction}).addTo(map);
 
             var title = new L.Control();
             title.onAdd = function (map) {
