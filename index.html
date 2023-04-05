@@ -26,9 +26,12 @@
 
         <!-- geojson data -->
         <script src="data/roads.geojson"></script>
-        <script src="data/buildings.geojson"></script>
+        <script src="data/active_buildings.geojson"></script>
         <script src="data/landcover.geojson"></script> 
         <script src="data/amenity_polygons.geojson"></script>
+        <script src="data/streets.geoJson"></script>
+        <script src="data/inactive_buildings.geojson"></script>
+        <script src="data/parks.geoJson"></script>
 
         <style>
             html, body, #map {
@@ -56,44 +59,105 @@
                     fillOpacity:1
                 }
             }
-             
-            function buildingStyle(feature){
-                return {
-                    fillColor:'lightGray',
+
+            function getColor(d) {
+                if (d == "Available") return "#74c476";
+                else if (d == "Business Ownership") return "#fdbe85";
+                else if (d == "Private Ownership") return "#9ecae1";
+                else if (d == "Government Owned") return "#fc9272";
+                else if (d == "Private Property") return "#9e9ac8";
+                else return "lightGray"
+            }
+
+            function activeBuildingStyle(feature){
+                var d = '';
+                for (var p in feature.properties) {
+                    if (p == "status") d = feature.properties[p];
+                }
+                return { 
+                    fillColor: getColor(d),
                     weight:1,
                     opacity:1,
                     color:'gray',
-                    fillOpacity:0.5
+                    fillOpacity:1
                 }
             }
 
-            function roadStyle(feature){
+            function inactiveBuildingStyle(feature){
+                return { 
+                    fillColor:'darkGray',
+                    weight:1,
+                    opacity:1,
+                    color:'gray',
+                    fillOpacity:1
+                }
+            }
+
+            function streetStyle(feature){
                 return {
                     weight:2.5,
                     color:"rgba(108, 108, 108, 1)"
                 }
             }
 
-            function amenityStyle(feature){
+            function roadStyle(feature){
                 return {
-                    weight:1,
-                    opacity:0.5,
-                    color:'brown',
-                    fillColor:'brown',
-                    fillOpacity:0.2
+                    weight:2.5,
+                    color:"brown",
+                    opacity:0.7
+                }
+            }
+
+            function parkStyle(feature){
+                return {
+                    color:'#74c35b',
+                    fillOpacity:1,
+                    opacity:0
                 }
             }
 
             function buildingInteraction(feature, layer) {
+                var d = '';
+                for (var p in feature.properties) {
+                    if (p == "status") d = feature.properties[p];
+                }
+
                 layer.on({
                     mouseover: function () {
-                        this.setStyle({
-                            'fillColor': '#b45501',
-                        });
+                        if (d == "Available"){
+                            this.setStyle({
+                                'fillColor': '#31a354',
+                            });
+                        }
+                        else if (d == "Business Ownership"){
+                            this.setStyle({
+                                'fillColor': '#e34a33',
+                            });
+                        }
+                        else if (d == "Private Ownership"){
+                            this.setStyle({
+                                'fillColor': '#3182bd',
+                            });
+                        }
+                        else if (d == "Government Owned"){
+                            this.setStyle({
+                                'fillColor': '#de2d26',
+                            });
+                        }
+                        else if (d == "Private Property"){
+                            this.setStyle({
+                                'fillColor': '#756bb1',
+                            });
+                        }
+                        else {
+                            this.setStyle({
+                                'fillColor': '#b45501',
+                            });
+                        }
                     },
                     mouseout: function () {
                         this.setStyle({
-                            'fillColor': 'lightGray',
+                            'fillColor': getColor(d),
                         });
                     }
                 });
@@ -106,8 +170,11 @@
             }
 
             var landcover = L.geoJson(landcover,{style:landmassStyle}).addTo(map);
+            var parksLayer = L.geoJson(parks,{style:parkStyle}).addTo(map);
+            var streetsLayer = L.geoJson(streets,{style:streetStyle}).addTo(map);
             var roadsLayer = L.geoJson(roads,{style:roadStyle}).addTo(map);
-            var buildingsLayer = L.geoJson(buildings,{style:buildingStyle,onEachFeature: buildingInteraction}).addTo(map);
+            var inactiveBuildingLayer = L.geoJson(inactive_buildings,{style:inactiveBuildingStyle}).addTo(map);
+            var activeBuildingsLayer = L.geoJson(active_buildings,{style:activeBuildingStyle,onEachFeature:buildingInteraction}).addTo(map);
 
             var title = new L.Control();
             title.onAdd = function (map) {
