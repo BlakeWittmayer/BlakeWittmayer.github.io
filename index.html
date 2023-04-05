@@ -31,6 +31,7 @@
         <script src="data/amenity_polygons.geojson"></script>
         <script src="data/streets.geoJson"></script>
         <script src="data/inactive_buildings.geojson"></script>
+        <script src="data/parks.geoJson"></script>
 
         <style>
             html, body, #map {
@@ -94,13 +95,11 @@
                 }
             }
 
-            function amenityStyle(feature){
+            function parkStyle(feature){
                 return {
-                    weight:1,
-                    opacity:0.5,
-                    color:'brown',
-                    fillColor:'brown',
-                    fillOpacity:0.2
+                    color:'#74c35b',
+                    fillOpacity:1,
+                    opacity:0
                 }
             }
 
@@ -126,6 +125,7 @@
             }
 
             var landcover = L.geoJson(landcover,{style:landmassStyle}).addTo(map);
+            var parksLayer = L.geoJson(parks,{style:parkStyle}).addTo(map);
             var streetsLayer = L.geoJson(streets,{style:streetStyle}).addTo(map);
             var roadsLayer = L.geoJson(roads,{style:roadStyle}).addTo(map);
             var inactiveBuildingLayer = L.geoJson(inactive_buildings,{style:inactiveBuildingStyle}).addTo(map);
