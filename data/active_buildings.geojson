@@ -7745,7 +7745,8 @@ var active_buildings =
         {
             "type": "Feature",
             "properties": {
-                "amenity": "prison"
+                "amenity": "prison",
+                "status": "Government Owned"
             },
             "geometry": {
                 "type": "Polygon",
