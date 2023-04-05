@@ -60,9 +60,22 @@
                 }
             }
 
+            function getColor(d) {
+                if (d == "Available") return "#74c476";
+                else if (d == "Business Ownership") return "#fdbe85";
+                else if (d == "Private Ownership") return "#9ecae1";
+                else if (d == "Government Owned") return "#fc9272";
+                else if (d == "Private Property") return "#9e9ac8";
+                else return "lightGray"
+            }
+
             function activeBuildingStyle(feature){
+                var d = '';
+                for (var p in feature.properties) {
+                    if (p == "status") d = feature.properties[p];
+                }
                 return { 
-                    fillColor:'lightGray',
+                    fillColor: getColor(d),
                     weight:1,
                     opacity:1,
                     color:'gray',
@@ -104,15 +117,47 @@
             }
 
             function buildingInteraction(feature, layer) {
+                var d = '';
+                for (var p in feature.properties) {
+                    if (p == "status") d = feature.properties[p];
+                }
+
                 layer.on({
                     mouseover: function () {
-                        this.setStyle({
-                            'fillColor': '#b45501',
-                        });
+                        if (d == "Available"){
+                            this.setStyle({
+                                'fillColor': '#31a354',
+                            });
+                        }
+                        else if (d == "Business Ownership"){
+                            this.setStyle({
+                                'fillColor': '#e34a33',
+                            });
+                        }
+                        else if (d == "Private Ownership"){
+                            this.setStyle({
+                                'fillColor': '#3182bd',
+                            });
+                        }
+                        else if (d == "Government Owned"){
+                            this.setStyle({
+                                'fillColor': '#de2d26',
+                            });
+                        }
+                        else if (d == "Private Property"){
+                            this.setStyle({
+                                'fillColor': '#756bb1',
+                            });
+                        }
+                        else {
+                            this.setStyle({
+                                'fillColor': '#b45501',
+                            });
+                        }
                     },
                     mouseout: function () {
                         this.setStyle({
-                            'fillColor': 'lightGray',
+                            'fillColor': getColor(d),
                         });
                     }
                 });
