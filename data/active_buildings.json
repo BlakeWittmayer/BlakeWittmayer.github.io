@@ -1,4 +1,4 @@
-var active_buildings =
+active_buildings =
 {
     "type": "FeatureCollection",
     "generator": "JOSM",
