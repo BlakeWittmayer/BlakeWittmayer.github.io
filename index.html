@@ -30,6 +30,7 @@
         <script src="data/landcover.geojson"></script> 
         <script src="data/amenity_polygons.geojson"></script>
         <script src="data/streets.geoJson"></script>
+        <script src="data/streets.geojson"></script>
         <script src="data/inactive_buildings.geojson"></script>
         <script src="data/parks.geoJson"></script>
 
@@ -60,13 +61,23 @@
                 }
             }
 
-            function getColor(d) {
-                if (d == "Available") return "#74c476";
-                else if (d == "Business Ownership") return "#fdbe85";
-                else if (d == "Private Ownership") return "#9ecae1";
-                else if (d == "Government Owned") return "#fc9272";
-                else if (d == "Private Property") return "#9e9ac8";
-                else return "lightGray"
+            function getColor(d,n) {
+                if (n == 1){
+                    if (d == "Available") return "#74c476";
+                    else if (d == "Business Ownership") return "#fdbe85";
+                    else if (d == "Private Ownership") return "#9ecae1";
+                    else if (d == "Government Owned") return "#fc9272";
+                    else if (d == "Private Property") return "#9e9ac8";
+                    else return "lightGray"
+                }
+                else if (n == 0){
+                    if (d == "Available") return "#31a354";
+                    else if (d == "Business Ownership") return "#e34a33";
+                    else if (d == "Private Ownership") return "#3182bd";
+                    else if (d == "Government Owned") return "#de2d26";
+                    else if (d == "Private Property") return "#756bb1";
+                    else return "#b45501"
+                }
             }
 
             function activeBuildingStyle(feature){
@@ -75,7 +86,7 @@
                     if (p == "status") d = feature.properties[p];
                 }
                 return { 
-                    fillColor: getColor(d),
+                    fillColor: getColor(d,1),
                     weight:1,
                     opacity:1,
                     color:'gray',
@@ -117,56 +128,52 @@
             }
 
             function buildingInteraction(feature, layer) {
-                var d = '';
+                let Address, number, street, city, status, type, trello, name;
+
                 for (var p in feature.properties) {
-                    if (p == "status") d = feature.properties[p];
+                    if (p == "status") status = feature.properties[p];
+                    else if (p == "addr:street") street = feature.properties[p];
+                    else if (p == "addr:city") city = feature.properties[p];
+                    else if (p == "addr:housenumber") number = feature.properties[p];
+                    else if (p == "trello") trello = feature.properties[p];
+                    else if (p == "type") type = feature.properties[p];
+                    else if (p == "name") name = feature.properties[p];
                 }
+                Address = `${number} ${street} ${city}`;
 
                 layer.on({
                     mouseover: function () {
-                        if (d == "Available"){
-                            this.setStyle({
-                                'fillColor': '#31a354',
-                            });
-                        }
-                        else if (d == "Business Ownership"){
-                            this.setStyle({
-                                'fillColor': '#e34a33',
-                            });
-                        }
-                        else if (d == "Private Ownership"){
-                            this.setStyle({
-                                'fillColor': '#3182bd',
-                            });
-                        }
-                        else if (d == "Government Owned"){
-                            this.setStyle({
-                                'fillColor': '#de2d26',
-                            });
-                        }
-                        else if (d == "Private Property"){
-                            this.setStyle({
-                                'fillColor': '#756bb1',
-                            });
-                        }
-                        else {
-                            this.setStyle({
-                                'fillColor': '#b45501',
-                            });
-                        }
+                        this.setStyle({
+                            'fillColor': getColor(status,0),
+                        });
                     },
                     mouseout: function () {
                         this.setStyle({
-                            'fillColor': getColor(d),
+                            'fillColor': getColor(status,1),
                         });
                     }
                 });
-                var popupContent = '<table>';
-                for (var p in feature.properties) {
-                    popupContent += '<tr><td>' + p + ':</td><td><b>' + feature.properties[p] + '</b></td></tr>';
-                }
-                popupContent += '</table>';
-                layer.bindPopup(popupContent);
+
+                const sortedProps = {
+                    "Address:": Address,
+                    "Status:": status,
+                    "Type:": type,
+                    "Trello:": trello,
+                };
+                
+                var table = `
+                <table>
+                    ${Object.entries(sortedProps)
+                        .map(([prop, val]) => `
+                        <tr>
+                            <td>${prop}</td>
+                            <td>${val}</td>
+                        </tr>
+                        `)
+                        .join('')}
+                    </table>
+                `;
+                layer.bindPopup(table);
             }
 
             var landcover = L.geoJson(landcover,{style:landmassStyle}).addTo(map);

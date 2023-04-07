@@ -9,7 +9,7 @@ var active_buildings =
                 "addr:city": "Lander",
                 "status": "Available",
                 "type": "Commercial Property",
-                "contact:trello": "https://trello.com/c/TikodxAT",
+                "trello": "https://trello.com/c/TikodxAT",
                 "building": "sports_centre"
             },
             "geometry": {
@@ -307,7 +307,7 @@ var active_buildings =
             "type": "Feature",
             "properties": {
                 "name": "Beograd Kuhinja",
-                "contact:trello": "https://trello.com/c/Ye3XmmjV",
+                "trello": "https://trello.com/c/Ye3XmmjV",
                 "building": "commercial",
                 "addr:city": "Lander",
                 "status": "Available",
@@ -351,7 +351,7 @@ var active_buildings =
                 "name": "Deane & Davis",
                 "type": "Commercial Property",
                 "addr:housenumber": "890",
-                "contact:trello": "https://trello.com/c/w2gxVDT4"
+                "trello": "https://trello.com/c/w2gxVDT4"
             },
             "geometry": {
                 "type": "Polygon",
@@ -766,11 +766,11 @@ var active_buildings =
             "type": "Feature",
             "properties": {
                 "operator": "Syntax Protective Detail",
-                "contact:discord": "https://discord.gg/a2MJqry4pp",
+                "discord": "https://discord.gg/a2MJqry4pp",
                 "building": "warehouse",
                 "type": "Commercial Property",
                 "status": "Business Ownership",
-                "contact:trello": "https://trello.com/c/SO9BTYzy"
+                "trello": "https://trello.com/c/SO9BTYzy"
             },
             "geometry": {
                 "type": "Polygon",
@@ -914,7 +914,7 @@ var active_buildings =
                 "amenity": "fuel",
                 "addr:street": "Hill St",
                 "name": "Plug 'N Chug",
-                "contact:trello": "https://trello.com/c/RFVPsUa3"
+                "trello": "https://trello.com/c/RFVPsUa3"
             },
             "geometry": {
                 "type": "Polygon",
@@ -1407,8 +1407,8 @@ var active_buildings =
             "type": "Feature",
             "properties": {
                 "name": "Mayflower Postal Service",
-                "contact:discord": "https://discord.gg/E9qdqz2EBM",
-                "contact:trello": "https://trello.com/c/06ptYfTv",
+                "discord": "https://discord.gg/E9qdqz2EBM",
+                "trello": "https://trello.com/c/06ptYfTv",
                 "building": "office",
                 "amenity": "post_office",
                 "addr:city": "Lander",
@@ -1452,7 +1452,7 @@ var active_buildings =
                 "name": "Volt",
                 "addr:housenumber": "180",
                 "addr:street": "Plymouth Ave",
-                "contact:trello": "https://trello.com/c/vEsZ9F25",
+                "trello": "https://trello.com/c/vEsZ9F25",
                 "type": "Commercial Property",
                 "operator": "Volt",
                 "status": "Business Ownership",
@@ -1495,7 +1495,7 @@ var active_buildings =
                 "status": "Available",
                 "building": "warehouse",
                 "type": "Commercial Property",
-                "contact:trello": "https://trello.com/c/MddrCJ5M"
+                "trello": "https://trello.com/c/MddrCJ5M"
             },
             "geometry": {
                 "type": "Polygon",
@@ -1868,7 +1868,7 @@ var active_buildings =
                 "police": "station",
                 "operator": "Lander Police Department",
                 "addr:city": "Lander",
-                "contact:discord": "https://discord.gg/NHRfmeqJxq",
+                "discord": "https://discord.gg/NHRfmeqJxq",
                 "name": "Lander Police Station",
                 "status": "Government Owned"
             },
@@ -1957,7 +1957,7 @@ var active_buildings =
         {
             "type": "Feature",
             "properties": {
-                "contact:trello": "https://trello.com/c/6OIfaN6S",
+                "trello": "https://trello.com/c/6OIfaN6S",
                 "addr:city": "Lander",
                 "status": "Available",
                 "name": "Barn",
@@ -1996,7 +1996,7 @@ var active_buildings =
             "type": "Feature",
             "properties": {
                 "status": "Available",
-                "contact:trello": "https://trello.com/c/2w8O6xtj",
+                "trello": "https://trello.com/c/2w8O6xtj",
                 "type": "Commercial Property",
                 "building": "construction"
             },
@@ -2044,7 +2044,7 @@ var active_buildings =
             "type": "Feature",
             "properties": {
                 "shop": "weapons",
-                "contact:trello": "https://trello.com/c/RQWp2jGP",
+                "trello": "https://trello.com/c/RQWp2jGP",
                 "name": "Cube Mart",
                 "addr:city": "Lander",
                 "status": "Available",
@@ -2086,7 +2086,7 @@ var active_buildings =
                 "addr:city": "Lander",
                 "status": "Available",
                 "type": "Commercial Property",
-                "contact:trello": "https://trello.com/c/jkFYBrfB",
+                "trello": "https://trello.com/c/jkFYBrfB",
                 "amenity": "fuel",
                 "name": "Pump N' Dump"
             },
@@ -2229,7 +2229,7 @@ var active_buildings =
         {
             "type": "Feature",
             "properties": {
-                "contact:trello": "https://trello.com/c/2V8Thw4R",
+                "trello": "https://trello.com/c/2V8Thw4R",
                 "name": "Shop 'N Stop",
                 "building": "commercial",
                 "status": "Available",
@@ -2352,8 +2352,8 @@ var active_buildings =
             "properties": {
                 "addr:housenumber": "815",
                 "addr:city": "Plymouth",
-                "contact:discord": "https://discord.gg/eKSqff8x",
-                "contact:trello": "https://trello.com/c/tXq7AVO6",
+                "discord": "https://discord.gg/eKSqff8x",
+                "trello": "https://trello.com/c/tXq7AVO6",
                 "building": "commercial",
                 "name": "National Rifle Association Clubhouse",
                 "amenity": "bar",
@@ -2396,7 +2396,7 @@ var active_buildings =
                 "type": "Residential Property",
                 "status": "Available",
                 "building": "hotel",
-                "contact:trello": "https://trello.com/c/1xrmjnNh"
+                "trello": "https://trello.com/c/1xrmjnNh"
             },
             "geometry": {
                 "type": "Polygon",
@@ -2470,7 +2470,7 @@ var active_buildings =
             "type": "Feature",
             "properties": {
                 "type": "Multi-Commercial Property",
-                "contact:trello": "https://trello.com/c/E13UNlL1",
+                "trello": "https://trello.com/c/E13UNlL1",
                 "building": "commercial",
                 "addr:city": "Lander",
                 "name": "McDoogle Tower",
@@ -2547,7 +2547,7 @@ var active_buildings =
             "type": "Feature",
             "properties": {
                 "addr:city": "Plymouth",
-                "contact:trello": "https://trello.com/c/kFem47By",
+                "trello": "https://trello.com/c/kFem47By",
                 "addr:street": "Main Rd",
                 "addr:housenumber": "280",
                 "status": "Available",
@@ -2714,7 +2714,7 @@ var active_buildings =
             "properties": {
                 "operator": "Bill, Young & Associates",
                 "addr:city": "Plymouth",
-                "contact:trello": "https://trello.com/c/CimoGBQ5",
+                "trello": "https://trello.com/c/CimoGBQ5",
                 "office": "lawyer",
                 "building": "office",
                 "addr:housenumber": "170",
@@ -2934,7 +2934,7 @@ var active_buildings =
                 "building": "boathouse",
                 "status": "Available",
                 "type": "Commercial Property",
-                "contact:trello": "https://trello.com/c/dUAOUtOT"
+                "trello": "https://trello.com/c/dUAOUtOT"
             },
             "geometry": {
                 "type": "Polygon",
@@ -3236,7 +3236,7 @@ var active_buildings =
         {
             "type": "Feature",
             "properties": {
-                "contact:trello": "https://trello.com/c/D7c0z2fj",
+                "trello": "https://trello.com/c/D7c0z2fj",
                 "addr:city": "Plymouth",
                 "building": "commercial",
                 "status": "Available",
@@ -3426,7 +3426,7 @@ var active_buildings =
                 "operator": "LETI",
                 "building": "office",
                 "addr:city": "Lander",
-                "contact:discord": "https://discord.gg/y6baBsG4Ns",
+                "discord": "https://discord.gg/y6baBsG4Ns",
                 "name": "Law Enforcement Training Institute Center",
                 "status": "Government Owned"
             },
@@ -4017,7 +4017,7 @@ var active_buildings =
             "properties": {
                 "operator": "SpecialKomrade",
                 "name": "Plymouth Church",
-                "contact:trello": "https://trello.com/c/GPImWtl3",
+                "trello": "https://trello.com/c/GPImWtl3",
                 "type": "Commercial Property",
                 "status": "Private Ownership",
                 "amenity": "church",
@@ -4135,7 +4135,7 @@ var active_buildings =
                 "addr:street": "Plymouth Ave",
                 "type": "Commercial Property",
                 "name": "Tip Industries",
-                "contact:trello": "https://trello.com/c/D6M5RpjA"
+                "trello": "https://trello.com/c/D6M5RpjA"
             },
             "geometry": {
                 "type": "Polygon",
@@ -4171,7 +4171,7 @@ var active_buildings =
                 "type": "Residential Property",
                 "status": "Available",
                 "building": "hotel",
-                "contact:trello": "https://trello.com/c/1xrmjnNh"
+                "trello": "https://trello.com/c/1xrmjnNh"
             },
             "geometry": {
                 "type": "Polygon",
@@ -4309,7 +4309,7 @@ var active_buildings =
                 "building": "commercial",
                 "status": "Available",
                 "addr:housenumber": "895",
-                "contact:trello": "https://trello.com/c/3cVz8erl",
+                "trello": "https://trello.com/c/3cVz8erl",
                 "type": "Commercial Property"
             },
             "geometry": {
@@ -4437,7 +4437,7 @@ var active_buildings =
                 "building": "retail",
                 "status": "Available",
                 "name": "Tsar Jewlery",
-                "contact:trello": "https://trello.com/c/sobD4aZL",
+                "trello": "https://trello.com/c/sobD4aZL",
                 "addr:housenumber": "875",
                 "type": "Commercial Property"
             },
@@ -4765,8 +4765,8 @@ var active_buildings =
             "type": "Feature",
             "properties": {
                 "military": "range",
-                "contact:trello": "https://trello.com/c/3nWvz8oh",
-                "contact:discord": "https://discord.gg/eKSqff8x",
+                "trello": "https://trello.com/c/3nWvz8oh",
+                "discord": "https://discord.gg/eKSqff8x",
                 "name": "National Rifle Association Range",
                 "type": "Commercial Property",
                 "operator": "National Rifle Association",
@@ -4810,7 +4810,7 @@ var active_buildings =
                 "status": "Available",
                 "addr:street": "Industrial Pkwy",
                 "amenity": "restaurant",
-                "contact:trello": "https://trello.com/c/1rT1SHR0",
+                "trello": "https://trello.com/c/1rT1SHR0",
                 "type": "Commercial Property"
             },
             "geometry": {
@@ -4993,7 +4993,7 @@ var active_buildings =
                 "addr:city": "Lander",
                 "status": "Available",
                 "type": "Commercial Property",
-                "contact:trello": "https://trello.com/c/jkFYBrfB",
+                "trello": "https://trello.com/c/jkFYBrfB",
                 "amenity": "fuel",
                 "name": "Pump N' Dump"
             },
@@ -6052,7 +6052,7 @@ var active_buildings =
                 "addr:city": "Plymouth",
                 "building": "retail",
                 "status": "Available",
-                "contact:trello": "https://trello.com/c/j25ER3L8",
+                "trello": "https://trello.com/c/j25ER3L8",
                 "name": "Chicagoland Tailoring",
                 "type": "Commercial Property",
                 "addr:housenumber": "880"
@@ -6283,7 +6283,7 @@ var active_buildings =
                 "status": "Available",
                 "building": "apartments",
                 "addr:street": "Plymouth Ave",
-                "contact:trello": "https://trello.com/c/8brNXys3",
+                "trello": "https://trello.com/c/8brNXys3",
                 "type": "building"
             },
             "geometry": {
@@ -6318,7 +6318,7 @@ var active_buildings =
             "type": "Feature",
             "properties": {
                 "name": "West",
-                "contact:trello": "https://trello.com/c/EK1vnJaI",
+                "trello": "https://trello.com/c/EK1vnJaI",
                 "addr:city": "Plymouth",
                 "addr:housenumber": "910",
                 "building": "commercial",
@@ -6552,7 +6552,7 @@ var active_buildings =
             "properties": {
                 "status": "Available",
                 "name": "Old County Jail",
-                "contact:trello": "https://trello.com/c/hyw0Nr0j",
+                "trello": "https://trello.com/c/hyw0Nr0j",
                 "type": "Commercial Property",
                 "building": "yes"
             },
@@ -6763,7 +6763,7 @@ var active_buildings =
         {
             "type": "Feature",
             "properties": {
-                "contact:trello": "https://trello.com/c/RQWp2jGP",
+                "trello": "https://trello.com/c/RQWp2jGP",
                 "addr:city": "Lander",
                 "status": "Available",
                 "name": "Lander Bank",
@@ -6922,7 +6922,7 @@ var active_buildings =
                 "addr:street": "Oxxygen St",
                 "name": "Parking Garage",
                 "type": "Commercial Property",
-                "contact:trello": "https://trello.com/c/Mvwl04KK"
+                "trello": "https://trello.com/c/Mvwl04KK"
             },
             "geometry": {
                 "type": "Polygon",
@@ -7249,11 +7249,11 @@ var active_buildings =
             "type": "Feature",
             "properties": {
                 "name": "M-SPAN",
-                "contact:discord": "https://discord.gg/9epcH77zhU",
+                "discord": "https://discord.gg/9epcH77zhU",
                 "building": "office",
                 "addr:city": "Lander",
                 "type": "Commercial Property",
-                "contact:trello": "https://trello.com/c/wMk0AVh4",
+                "trello": "https://trello.com/c/wMk0AVh4",
                 "status": "Business Ownership",
                 "operator": "RO-SPAN"
             },
@@ -7563,7 +7563,7 @@ var active_buildings =
                 "amenity": "fuel",
                 "addr:street": "Hill St",
                 "name": "Plug 'N Chug",
-                "contact:trello": "https://trello.com/c/RFVPsUa3"
+                "trello": "https://trello.com/c/RFVPsUa3"
             },
             "geometry": {
                 "type": "Polygon",
@@ -7668,8 +7668,8 @@ var active_buildings =
             "type": "Feature",
             "properties": {
                 "military": "range",
-                "contact:trello": "https://trello.com/c/3nWvz8oh",
-                "contact:discord": "https://discord.gg/eKSqff8x",
+                "trello": "https://trello.com/c/3nWvz8oh",
+                "discord": "https://discord.gg/eKSqff8x",
                 "name": "National Rifle Association Range",
                 "type": "Commercial Property",
                 "operator": "National Rifle Association",
@@ -8149,7 +8149,7 @@ var active_buildings =
             "type": "Feature",
             "properties": {
                 "building": "police_station",
-                "contact:discord": "https://discord.gg/Y7kN4XPHqG",
+                "discord": "https://discord.gg/Y7kN4XPHqG",
                 "addr:street": "Rail Rd",
                 "police": "headquarters",
                 "addr:city": "Lander",
@@ -8343,7 +8343,7 @@ var active_buildings =
                 "building": "temple",
                 "addr:city": "Lander",
                 "status": "Available",
-                "contact:trello": "https://trello.com/c/FKeYf8IT",
+                "trello": "https://trello.com/c/FKeYf8IT",
                 "type": "Commercial Property"
             },
             "geometry": {
@@ -8672,7 +8672,7 @@ var active_buildings =
             "properties": {
                 "addr:city": "Lander",
                 "status": "Available",
-                "contact:trello": "https://trello.com/c/4hsCh1dA",
+                "trello": "https://trello.com/c/4hsCh1dA",
                 "addr:street": "Industrial Pkwy",
                 "name": "Doctor Stereo",
                 "type": "Commercial Property",
@@ -8713,7 +8713,7 @@ var active_buildings =
                 "building": "police_station",
                 "addr:city": "Plymouth",
                 "police": "station",
-                "contact:discord": "https://discord.gg/XYapPjrQNC",
+                "discord": "https://discord.gg/XYapPjrQNC",
                 "addr:housenumber": "900",
                 "addr:street": "McDoogle St",
                 "status": "Government Owned"
@@ -9144,7 +9144,7 @@ var active_buildings =
             "properties": {
                 "addr:housenumber": "40",
                 "addr:city": "Plymouth",
-                "contact:trello": "https://trello.com/c/2W7sbbrT",
+                "trello": "https://trello.com/c/2W7sbbrT",
                 "building": "commercial",
                 "status": "Available",
                 "type": "Commercial Property",
@@ -9273,7 +9273,7 @@ var active_buildings =
             "properties": {
                 "addr:street": "Harbor Rd",
                 "addr:city": "Plymouth",
-                "contact:trello": "https://trello.com/c/2sKkW2Yz",
+                "trello": "https://trello.com/c/2sKkW2Yz",
                 "status": "Available",
                 "building": "warehouse",
                 "addr:housenumber": "400",
@@ -9338,7 +9338,7 @@ var active_buildings =
                 "addr:city": "Lander",
                 "status": "Available",
                 "type": "Commercial Property",
-                "contact:trello": "https://trello.com/c/jkFYBrfB",
+                "trello": "https://trello.com/c/jkFYBrfB",
                 "amenity": "fuel",
                 "name": "Pump N' Dump"
             },
